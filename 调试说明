@@ -1,0 +1,14 @@
+1、最简单的用例中，http_response格式一定要弄对，不能有空格
+while True:
+    client_connection, client_address = listen_socket.accept()
+    request = client_connection.recv(1024)
+    print("before \n")
+    print (request)
+
+    #此处只能是顶格，且头后面要跟一个换行，然后才是body
+    http_response = """\
+HTTP/1.1 200 OK
+
+Hello, World!
+"""
+
