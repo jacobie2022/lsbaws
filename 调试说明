@@ -12,3 +12,17 @@ HTTP/1.1 200 OK
 Hello, World!
 """
 
+webserver2
+最终会出现
+Traceback (most recent call last):
+  File "D:/Python_Code/html/smallwebserver/webserver2.py", line 143, in <module>
+    httpd.serve_forever()
+  File "D:/Python_Code/html/smallwebserver/webserver2.py", line 41, in serve_forever
+    self.handle_one_request()
+  File "D:/Python_Code/html/smallwebserver/webserver2.py", line 51, in handle_one_request
+    self.parse_request(request_data)
+  File "D:/Python_Code/html/smallwebserver/webserver2.py", line 64, in parse_request
+    request_line = text.splitlines()[0]
+IndexError: list index out of range
+
+我在GIT源中也有人有类似问题，但是作者没有给出解答
